@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class TriangularRun {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter side1: ");
+        double a = sc.nextDouble();
+        System.out.print("Enter side2: ");
+        double b = sc.nextDouble();
+        System.out.print("Enter side3: ");
+        double c = sc.nextDouble();
+        double rounds = calculateRounds(a, b, c);
+        System.out.println("The athlete must complete " + rounds + " rounds to finish 5 km.");
+    }
+    public static int calculateRounds(double a, double b, double c) {
+        double perimeter = a + b + c;
+        return (int)Math.ceil(5000 / perimeter);
+    }
+}
